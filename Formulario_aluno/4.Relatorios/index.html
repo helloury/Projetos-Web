@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro e Relatórios de Alunos</title>
+</head>
+<body>
+  <h2>📘 Cadastro de Alunos</h2>
+
+  <form id="formAluno">
+    <input type="text" id="nome" placeholder="Nome" required>
+    <input type="number" id="idade" placeholder="Idade" required>
+    <fieldset style="display:inline-block; border: none;">
+      <legend>Curso:</legend>
+      <label><input type="radio" name="curso" value="JavaScript" required> JavaScript</label>
+      <label><input type="radio" name="curso" value="Python"> Python</label>
+      <label><input type="radio" name="curso" value="Java"> Java</label>
+    </fieldset>
+    <input type="number" id="notaFinal" placeholder="Nota Final" required>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <table id="tabelaAlunos">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Curso</th>
+        <th>Nota Final</th>
+        <th>Aprovado?</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <section id="relatorios">
+    <h2>📊 Relatórios</h2>
+    <button id="btnAprovados">Aprovados</button>
+    <button id="btnMediaNotas">Média das Notas</button>
+    <button id="btnMediaIdades">Média das Idades</button>
+    <button id="btnOrdemAlfabetica">Ordem Alfabética</button>
+    <button id="btnQtdPorCurso">Qtd. por Curso</button>
+    <div id="saidaRelatorio"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
