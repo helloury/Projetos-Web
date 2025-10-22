@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Funcionários</title>
+</head>
+<body>
+  <h1>Cadastro de Funcionários</h1>
+
+  <form id="form-funcionario">
+    <label>Nome:</label>
+    <input type="text" id="nome" required><br><br>
+
+    <label>Idade:</label>
+    <input type="number" id="idade" required><br><br>
+
+    <label>Cargo:</label>
+    <input type="text" id="cargo" required><br><br>
+
+    <label>Salário:</label>
+    <input type="number" id="salario" required><br><br>
+
+    <button type="submit">Salvar</button>
+  </form>
+
+  <h2>Lista de Funcionários</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Cargo</th>
+        <th>Salário</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="tabela-funcionarios"></tbody>
+  </table>
+
+  <h2>Relatórios</h2>
+  <button id="relatorio1">Funcionários com salário > R$ 5000</button>
+  <button id="relatorio2">Média Salarial</button>
+  <button id="relatorio3">Cargos Únicos</button>
+  <button id="relatorio4">Nomes em Maiúsculo</button>
+
+  <div id="resultado-relatorio"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
