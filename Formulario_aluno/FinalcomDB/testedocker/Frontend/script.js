@@ -36,7 +36,7 @@ const carregarAlunos = () => {
   }
 };
 
-// ===== Função  =====
+// ===== Função =====
 const atualizarTabela = () => {
   tabela.innerHTML = "";
   alunos.forEach((a, i) => {
@@ -53,7 +53,7 @@ const atualizarTabela = () => {
       </td>
     `;
   });
-  salvarAlunos();
+  salvarAlunos(); 
 };
 
 // ===== Cadastro =====

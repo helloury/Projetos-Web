@@ -1,4 +1,4 @@
-// ===== Classe Aluno =====
+
 class Aluno {
     constructor(nome, idade, curso, notaFinal) {
         this.nome = nome;
@@ -16,7 +16,7 @@ class Aluno {
     }
 }
 
-// ===== Variáveis globais =====
+
 let alunos = [];
 let editandoIndex = -1;
 
@@ -25,7 +25,7 @@ const form = document.getElementById('form-aluno');
 const btnCadastrar = document.getElementById('btnCadastrar');
 const tabela = document.querySelector('#tabela-alunos tbody');
 
-// ===== Persistência =====
+// ==== salva no banco ====
 const salvarNoLocalStorage = () => {
     localStorage.setItem('alunos', JSON.stringify(alunos));
 };
@@ -40,7 +40,7 @@ const carregarDoLocalStorage = () => {
     }
 };
 
-// ===== Funções principais (arrow functions) =====
+// funçoes 
 const limparFormulario = () => {
     form.reset();
     document.querySelector('input[name="curso"][value="JavaScript"]').checked = true;
@@ -132,10 +132,10 @@ const editarAluno = (index) => {
     editandoIndex = index;
 };
 
-// ===== Eventos =====
+
 btnCadastrar.addEventListener('click', function() {
     cadastrarAluno();
 });
 
-// ===== Inicialização =====
+
 window.addEventListener('load', carregarDoLocalStorage);
