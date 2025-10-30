@@ -1,50 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Cadastro de Funcionários</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Cadastro de Funcionários</h1>
 
-  <form id="form-funcionario">
-    <label>Nome:</label>
-    <input type="text" id="nome" required><br><br>
+    <h1>Cadastro de Funcionários</h1>
 
-    <label>Idade:</label>
-    <input type="number" id="idade" required><br><br>
+    <form id="formFuncionario">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+        </div>
+        <div>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" required>
+        </div>
+        <div>
+            <label for="cargo">Cargo:</label>
+            <input type="text" id="cargo" required>
+        </div>
+        <div>
+            <label for="salario">Salário (R$):</label>
+            <input type="number" id="salario" step="0.01" required>
+        </div>
+        
+        <input type="hidden" id="editId" value="">
+        <button type="submit">Cadastrar</button>
+    </form>
+    
+    <hr>
 
-    <label>Cargo:</label>
-    <input type="text" id="cargo" required><br><br>
+    <h2>Funcionários Cadastrados</h2>
+    <table border="1" id="tabelaFuncionarios">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Cargo</th>
+                <th>Salário</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyFuncionarios"></tbody>
+    </table>
 
-    <label>Salário:</label>
-    <input type="number" id="salario" required><br><br>
+    <hr>
 
-    <button type="submit">Salvar</button>
-  </form>
+    <h2>Relatórios Dinâmicos</h2>
+    <div id="botoesRelatorios">
+        <button id="btnRelatorioSalario">Salários > R$ 5000</button>
+        <button id="btnRelatorioMedia">Média Salarial</button>
+        <button id="btnRelatorioCargos">Cargos Únicos</button>
+        <button id="btnRelatorioNomes">Nomes em Maiúsculo</button>
+    </div>
+    
+    <div id="areaResultados">
+        <pre id="resultadoRelatorio"></pre>
+    </div>
 
-  <h2>Lista de Funcionários</h2>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Idade</th>
-        <th>Cargo</th>
-        <th>Salário</th>
-        <th>Ações</th>
-      </tr>
-    </thead>
-    <tbody id="tabela-funcionarios"></tbody>
-  </table>
-
-  <h2>Relatórios</h2>
-  <button id="relatorio1">Funcionários com salário > R$ 5000</button>
-  <button id="relatorio2">Média Salarial</button>
-  <button id="relatorio3">Cargos Únicos</button>
-  <button id="relatorio4">Nomes em Maiúsculo</button>
-
-  <div id="resultado-relatorio"></div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
